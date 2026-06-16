@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-accent: #2DD4BF;
+  --color-navy: #0F172A;
+  --color-surface: #1E293B;
+  --color-border: #334155;
+  --color-soft-white: #F1F5F9;
+  --color-muted: #94A3B8;
+
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-grid-move: grid-move 20s linear infinite;
+  --animate-pop-in: pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  --animate-bar-fill: bar-fill 1s ease-out forwards;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes grid-move {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(60px); }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bar-fill {
+  from { width: 0%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px #2DD4BF44; }
+  50%       { box-shadow: 0 0 25px #2DD4BF88; }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-navy);
+  color: var(--color-soft-white);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0F172A; }
+::-webkit-scrollbar-thumb { background: #2DD4BF55; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2DD4BF; }
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #2DD4BF;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
