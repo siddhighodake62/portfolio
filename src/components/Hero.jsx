@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 import { contact } from "../data";
-import HeroCanvas from "./HeroCanvas";
 import MagneticButton from "./MagneticButton";
 import { StaggerContainer, StaggerItem } from "./PageTransitions";
 
 const TITLES = [
   "Data Analyst",
-  "Software Developer",
-  "React Developer"
+  "Web Developer"
 ];
 
 export default function Hero() {
@@ -19,111 +17,125 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden px-6 bg-slate-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 bg-transparent"
     >
-      <HeroCanvas />
-
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <StaggerContainer className="order-2 md:order-1 pt-20 md:pt-0">
+      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
+        {/* Left: Text Content - Premium minimal */}
+        <StaggerContainer className="order-2 md:order-1">
           <StaggerItem>
-            <p className="text-[#2DD4BF] text-lg font-medium mb-3 tracking-wide uppercase">
-              Welcome to my portfolio
-            </p>
+            <div className="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border border-[#2DD4BF]/30 bg-[#2DD4BF]/5 backdrop-blur-sm">
+              <div className="w-2 h-2 rounded-full bg-[#2DD4BF] animate-pulse" />
+              <p className="text-[#2DD4BF] text-sm font-medium tracking-wide">Available for opportunities</p>
+            </div>
           </StaggerItem>
           
           <StaggerItem>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-heading)] leading-tight mb-4 text-slate-100">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-white">
               Siddhi <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] via-[#7C3AED] to-[#2DD4BF] animate-gradient">
                 Ghodake
               </span>
             </h1>
           </StaggerItem>
 
           <StaggerItem>
-            <h2 className="text-2xl sm:text-3xl text-slate-300 font-medium mb-6 h-10 flex items-center gap-2">
-              <span className="text-slate-400">I am a</span>
-              <span className="text-[#2DD4BF] font-mono">{currentTitle}</span>
-              <span className="w-2 h-6 bg-[#2DD4BF] animate-pulse"></span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#CBD5E1] font-medium mb-6 h-12 flex items-center gap-3">
+              <span>I craft</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] font-mono font-bold min-w-max">
+                {currentTitle}
+              </span>
             </h2>
           </StaggerItem>
 
           <StaggerItem>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-lg mb-10">
-              Transforming raw data into actionable business insights and building robust web applications.
+            <p className="text-lg text-[#94A3B8] leading-relaxed max-w-lg mb-12 font-light">
+              Transforming raw data into actionable insights and architecting scalable web solutions. Passionate about bridging analytics and engineering to solve real-world challenges.
             </p>
           </StaggerItem>
 
-          <StaggerItem className="flex flex-wrap gap-4 mb-10">
+          <StaggerItem className="flex flex-wrap gap-4 mb-12">
             <MagneticButton
               href="#projects"
-              className="px-8 py-3.5 bg-gradient-to-r from-[#2DD4BF] to-[#14B8A6] text-slate-950 rounded-full font-bold hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-[#2DD4BF] to-[#14B8A6] text-slate-950 rounded-xl font-bold hover:shadow-[0_20px_40px_rgba(45,212,191,0.3)] transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              View Projects
+              View My Work
             </MagneticButton>
             <MagneticButton
-              href="/resume.pdf"
-              target="_blank"
-              className="px-8 py-3.5 border border-[#334155] text-slate-200 rounded-full font-bold hover:border-[#2DD4BF] hover:text-[#2DD4BF] bg-slate-900/50 backdrop-blur-md transition-all duration-300"
+              href="#contact"
+              className="px-8 py-4 border-2 border-[#2DD4BF] text-white rounded-xl font-bold hover:bg-[#2DD4BF]/10 transition-all duration-300 active:scale-95"
             >
-              Download Resume
+              Get In Touch
             </MagneticButton>
           </StaggerItem>
 
-          <StaggerItem className="flex gap-5">
-            {[
-              { Icon: FiLinkedin, href: contact.linkedin, label: "LinkedIn" },
-              { Icon: FiGithub, href: contact.github, label: "GitHub" },
-              { Icon: FiMail, href: `mailto:${contact.email}`, label: "Email" },
-            ].map(({ Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-[#2DD4BF] hover:border-[#2DD4BF] hover:shadow-[0_0_20px_rgba(45,212,191,0.4)] transition-all duration-300"
-              >
-                <Icon size={22} />
-              </a>
-            ))}
+          <StaggerItem className="flex gap-6 items-center">
+            <div className="flex gap-4">
+              {[
+                { Icon: FiLinkedin, href: contact.linkedin, label: "LinkedIn" },
+                { Icon: FiGithub, href: contact.github, label: "GitHub" },
+                { Icon: FiMail, href: `mailto:${contact.email}`, label: "Email" }
+              ].map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-12 h-12 rounded-full bg-white/5 border border-[#2DD4BF]/30 flex items-center justify-center text-[#94A3B8] hover:text-[#2DD4BF] hover:border-[#2DD4BF] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)] transition-all duration-300"
+                >
+                  <Icon size={20} />
+                </a>
+              ))}
+            </div>
+            <div className="h-px w-12 bg-gradient-to-r from-[#2DD4BF]/50 to-transparent" />
           </StaggerItem>
         </StaggerContainer>
 
+        {/* Right: Profile Image - Premium minimal with subtle animations */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="order-1 md:order-2 flex justify-center relative"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80">
-            {/* Glowing rings */}
-            <div className="absolute inset-0 rounded-full border-2 border-[#2DD4BF]/20 animate-[spin_10s_linear_infinite]" />
-            <div className="absolute inset-[-10px] rounded-full border border-[#7C3AED]/30 animate-[spin_15s_linear_infinite_reverse]" />
-            <div className="absolute inset-[-20px] rounded-full border border-[#2DD4BF]/10 animate-[spin_20s_linear_infinite]" />
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+            {/* Gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/20 via-[#7C3AED]/10 to-[#2DD4BF]/5 rounded-3xl blur-2xl" />
             
-            <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-[#334155] bg-slate-900 z-10 shadow-[0_0_50px_rgba(45,212,191,0.15)]">
+            {/* Subtle rotating border - minimal */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-3xl border border-transparent bg-gradient-to-r from-[#2DD4BF]/40 via-transparent to-[#7C3AED]/40 bg-clip-border"
+            />
+            
+            {/* Image container */}
+            <div className="absolute inset-2 rounded-3xl overflow-hidden border border-[#2DD4BF]/20 bg-[#1A202C] shadow-2xl shadow-[#2DD4BF]/10">
               <img
                 src="/profile.jpg"
                 alt="Siddhi Ghodake"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 onError={(e) => {
-                  e.target.src = "https://ui-avatars.com/api/?name=Siddhi+Ghodake&background=0D1117&color=2DD4BF&size=512";
+                  e.target.src = "https://ui-avatars.com/api/?name=Siddhi+Ghodake&background=0F172A&color=2DD4BF&size=512";
                 }}
               />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/40 via-transparent to-transparent" />
             </div>
           </div>
         </motion.div>
       </div>
 
+      {/* Scroll indicator - subtle and refined */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+        transition={{ duration: 1, delay: 1, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <div className="w-6 h-10 rounded-full border-2 border-slate-600 flex items-start justify-center p-1">
-          <div className="w-1.5 h-2 bg-[#2DD4BF] rounded-full animate-bounce" />
+        <p className="text-[#94A3B8] text-sm font-light">Scroll to explore</p>
+        <div className="w-6 h-10 rounded-full border border-[#2DD4BF]/40 flex justify-center p-2">
+          <motion.div className="w-1.5 h-2 bg-[#2DD4BF]/60 rounded-full" animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity }} />
         </div>
       </motion.div>
     </section>

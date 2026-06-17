@@ -35,27 +35,27 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0F172A]/90 backdrop-blur-lg shadow-lg shadow-black/20 border-b border-[#334155]/50"
+          ? "bg-[#0F172A]/70 backdrop-blur-xl shadow-lg shadow-[#2DD4BF]/5 border-b border-[#2DD4BF]/10"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo - Premium minimal */}
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-2xl font-bold font-[family-name:var(--font-heading)] tracking-tight"
+          className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-[#E2E8F0] hover:from-[#2DD4BF] hover:to-[#7C3AED] transition-all duration-500"
         >
           Siddhi<span className="text-[#2DD4BF]">.</span>
         </a>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-1">
+        {/* Desktop links - Premium spacing */}
+        <ul className="hidden md:flex items-center gap-0.5">
           {navLinks.map((link) => {
             const key = link.href.replace("#", "");
             return (
@@ -66,10 +66,10 @@ export default function Navbar() {
                     e.preventDefault();
                     handleClick(link.href);
                   }}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     active === key
-                      ? "text-[#2DD4BF] bg-[#2DD4BF]/10"
-                      : "text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#1E293B]"
+                      ? "text-[#2DD4BF] bg-[#2DD4BF]/10 border border-[#2DD4BF]/30 shadow-[0_0_20px_rgba(45,212,191,0.15)]"
+                      : "text-[#CBD5E1] hover:text-white hover:bg-white/5 border border-transparent"
                   }`}
                 >
                   {link.label}
@@ -82,16 +82,16 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-[#F1F5F9] text-2xl p-2 rounded-lg hover:bg-[#1E293B] transition"
+          className="md:hidden text-white text-2xl p-2 rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-[#2DD4BF]/30"
           aria-label="Toggle menu"
         >
           {open ? <HiX /> : <HiMenuAlt3 />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - Premium styling */}
       {open && (
-        <div className="md:hidden bg-[#0F172A]/95 backdrop-blur-xl border-t border-[#334155]/50 animate-[fade-up_0.3s_ease-out]">
+        <div className="md:hidden bg-gradient-to-b from-[#0F172A]/95 to-[#1A202C]/95 backdrop-blur-xl border-t border-[#2DD4BF]/10 animate-[fade-up_0.3s_ease-out]">
           <ul className="flex flex-col p-6 gap-2">
             {navLinks.map((link) => {
               const key = link.href.replace("#", "");
@@ -105,8 +105,8 @@ export default function Navbar() {
                     }}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-all ${
                       active === key
-                        ? "text-[#2DD4BF] bg-[#2DD4BF]/10"
-                        : "text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#1E293B]"
+                        ? "text-[#2DD4BF] bg-[#2DD4BF]/10 border border-[#2DD4BF]/30"
+                        : "text-[#CBD5E1] hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {link.label}

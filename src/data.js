@@ -15,9 +15,9 @@ export const navLinks = [
 ];
 
 export const aboutStats = [
-  { label: "Projects Completed", value: 12 },
-  { label: "Technologies Learned", value: 15 },
-  { label: "Months of Experience", value: 18 } // Adjust as needed
+  { label: "Projects Completed", value: 10 },
+  { label: "Technologies Learned", value: 9 },
+  { label: "Months of Experience", value: 7 } // Adjust as needed
 ];
 
 export const skills = [
@@ -28,28 +28,11 @@ export const skills = [
       { name: "React.js", pct: 85 },
       { name: "JavaScript", pct: 80 },
       { name: "HTML5", pct: 95 },
-      { name: "CSS3", pct: 90 },
+      { name: "CSS", pct: 90 },
       { name: "Tailwind CSS", pct: 85 },
     ],
   },
-  {
-    category: "Backend Development",
-    icon: "server",
-    items: [
-      { name: "Node.js", pct: 70 },
-      { name: "Express.js", pct: 65 },
-    ],
-  },
-  {
-    category: "Database Management",
-    icon: "database",
-    items: [
-      { name: "MySQL", pct: 90 },
-      { name: "PostgreSQL", pct: 85 },
-      { name: "MongoDB", pct: 75 },
-    ],
-  },
-  {
+   {
     category: "Data Analytics & Reporting",
     icon: "chart",
     items: [
@@ -59,6 +42,23 @@ export const skills = [
       { name: "Python (Pandas)", pct: 75 },
     ],
   },
+  {
+    category: "Backend Development",
+    icon: "server",
+    items: [
+      { name: "Node.js", pct: 70 },
+      { name: "Express.js", pct: 50 },
+    ],
+  },
+  {
+    category: "Database Management",
+    icon: "database",
+    items: [
+      { name: "MySQL", pct: 90 },
+      { name: "MongoDB", pct: 50 },
+    ],
+  },
+ 
 ];
 
 export const experience = [
@@ -152,22 +152,16 @@ export const education = [
 export const certifications = [
   {
     title: "Data Analytics Professional Certificate",
-    issuer: "Google",
-    image: "/certificates/cert1-placeholder.jpg",
-    year: "2024",
-  },
-  {
-    title: "SQL for Data Science",
-    issuer: "Coursera",
-    image: "/certificates/cert2-placeholder.jpg",
-    year: "2024",
-  },
-  {
-    title: "Data Analytics Certification",
     issuer: "Fortune Cloud Technologies, Pune",
-    image: "/certificates/cert3-placeholder.jpg",
-    year: "2024",
-  }
+    image: "/certificates/DA_Certificate_Siddhi_Raghunath_Ghodake_1.pdf",
+    year: "2025",
+  },
+  {
+    title: "Data Analyst - Internship Experience",
+    issuer: "TechTech Ltd",
+    image: "/certificates/Internship Exp Letter-DA_Siddhi_Raghunath_Ghodake.pdf",
+    year: "2025",
+  },
 ];
 
 export const softSkills = [

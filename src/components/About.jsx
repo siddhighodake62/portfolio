@@ -27,42 +27,53 @@ function AnimatedCounter({ from = 0, to, duration = 2 }) {
 
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6 relative z-10 bg-slate-950/50">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-32 px-6 relative z-10">
+      <div className="max-w-7xl mx-auto">
         <FadeIn>
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] mb-4 text-slate-100">
+          <div className="mb-20">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED]">Me</span>
             </h2>
-            <div className="w-20 h-1.5 bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] rounded-full" />
+            <p className="text-lg text-[#94A3B8] max-w-2xl font-light leading-relaxed">
+              A passionate professional bridging data science and software development, with a keen eye for solving complex problems with elegant solutions.
+            </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <StaggerContainer className="lg:col-span-2 space-y-6">
+        <div className="grid md:grid-cols-3 gap-10 items-start">
+          {/* Left: Main content - Premium card */}
+          <StaggerContainer className="md:col-span-2 space-y-8">
             <StaggerItem>
-              <div className="p-8 rounded-3xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-xl hover:border-[#2DD4BF]/30 transition-colors duration-500 shadow-2xl shadow-black/50">
-                <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                  I am a passionate <span className="text-slate-100 font-semibold">Data Analyst and Software Developer</span> bridging the gap between raw data infrastructure and actionable business strategy. With a strong foundation in Computer Science, I specialize in extracting insights through complex SQL queries and visualizing them via dynamic Power BI dashboards.
+              <div className="p-8 rounded-2xl bg-white/5 border border-[#2DD4BF]/20 backdrop-blur-sm hover:border-[#2DD4BF]/40 hover:bg-white/[0.08] transition-all duration-500">
+                <h3 className="text-2xl font-bold text-white mb-4">Professional Journey</h3>
+                <p className="text-[#CBD5E1] text-lg leading-relaxed mb-4">
+                  I am a <span className="text-[#2DD4BF] font-semibold">Data Analyst and Full-Stack Developer</span> with a passion for transforming raw data into strategic insights and building intuitive digital solutions. Currently honing my skills as an IT Trainee at TechTech Ltd, where I design SQL queries, architect Power BI dashboards, and automate workflows.
                 </p>
-                <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                  Currently honing my skills as an IT Trainee at TechTech Ltd, I thrive on automating workflows and building intuitive React interfaces that make data accessible and beautiful.
+                <p className="text-[#CBD5E1] text-lg leading-relaxed">
+                  My unique strength lies in combining analytical rigor with software engineering best practices—enabling me to create not just reports, but transformative data products. I thrive on learning cutting-edge technologies and collaborating with cross-functional teams to solve real-world challenges.
                 </p>
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  My ultimate goal is to leverage advanced analytics and modern web technologies to solve real-world problems and optimize organizational performance.
+              </div>
+            </StaggerItem>
+
+            <StaggerItem>
+              <div className="p-8 rounded-2xl bg-white/5 border border-[#7C3AED]/20 backdrop-blur-sm hover:border-[#7C3AED]/40 hover:bg-white/[0.08] transition-all duration-500">
+                <h3 className="text-2xl font-bold text-white mb-4">Core Mission</h3>
+                <p className="text-[#CBD5E1] text-lg leading-relaxed">
+                  To leverage advanced analytics, modern web technologies, and data-driven methodologies to optimize organizational performance and create meaningful value for businesses and teams. Every project is an opportunity to combine precision, creativity, and technical excellence.
                 </p>
               </div>
             </StaggerItem>
           </StaggerContainer>
 
-          <StaggerContainer className="grid gap-6">
+          {/* Right: Statistics - Premium glass cards */}
+          <StaggerContainer className="grid gap-5">
             {aboutStats.map((stat, i) => (
               <StaggerItem key={i}>
-                <div className="p-6 rounded-3xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-xl hover:border-[#7C3AED]/30 hover:bg-slate-800/50 transition-all duration-500 group flex flex-col justify-center items-center text-center h-full">
-                  <h3 className="text-5xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-br from-[#2DD4BF] to-[#14B8A6] mb-2 group-hover:scale-110 transition-transform duration-500">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-[#2DD4BF]/20 backdrop-blur-sm hover:border-[#2DD4BF]/40 transition-all duration-500 group">
+                  <div className="text-4xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] mb-2 group-hover:scale-110 transition-transform duration-500 inline-block">
                     <AnimatedCounter to={stat.value} />+
-                  </h3>
-                  <p className="text-slate-400 font-medium uppercase tracking-wider text-sm">
+                  </div>
+                  <p className="text-[#94A3B8] font-medium uppercase tracking-wider text-sm">
                     {stat.label}
                   </p>
                 </div>

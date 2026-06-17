@@ -14,27 +14,31 @@ import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
 import ScrollProgress from "./components/ScrollProgress";
 import { MouseSpotlight } from "./components/Spotlight";
+import GlobalBackground from "./components/GlobalBackground";
 
 function App() {
   return (
-    <div className="bg-[#020617] min-h-screen text-[#F1F5F9] overflow-x-hidden selection:bg-[#2DD4BF]/30 selection:text-white">
+    <div className="bg-gradient-to-b from-[#0F172A] via-[#1A202C] to-[#0D1117] min-h-screen text-[#E2E8F0] overflow-x-hidden selection:bg-[#2DD4BF]/30 selection:text-white relative">
+      <GlobalBackground />
       <CustomCursor />
       <ScrollProgress />
-      <Navbar />
-      
-      <MouseSpotlight className="w-full min-h-screen">
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <DataAnalyticsShowcase />
-        <Education />
-        <Certifications />
-        <VideoSection />
-        <SoftSkills />
-        <Contact />
-      </MouseSpotlight>
+      <div className="relative z-20">
+        <Navbar />
+        
+        <MouseSpotlight className="w-full min-h-screen">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <DataAnalyticsShowcase />
+          <Education />
+          <Certifications />
+          <VideoSection />
+          <SoftSkills />
+          <Contact />
+        </MouseSpotlight>
+      </div>
     </div>
   );
 }

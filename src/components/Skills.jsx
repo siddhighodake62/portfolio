@@ -13,14 +13,16 @@ const iconMap = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 px-6 relative z-10">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-32 px-6 relative z-10">
+      <div className="max-w-7xl mx-auto">
         <FadeIn>
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] mb-4 text-slate-100">
-              Technical <span className="text-[#2DD4BF]">Expertise</span>
+          <div className="mb-20">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED]">Expertise</span>
             </h2>
-            <div className="w-20 h-1.5 bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] rounded-full mx-auto" />
+            <p className="text-lg text-[#94A3B8] max-w-2xl font-light">
+              A comprehensive toolkit spanning data analytics, full-stack development, and modern technologies.
+            </p>
           </div>
         </FadeIn>
 
@@ -30,13 +32,13 @@ export default function Skills() {
             
             return (
               <CardContainer key={index} className="w-full">
-                <CardBody className="bg-slate-900/40 relative group/card border-slate-800/60 border hover:border-[#2DD4BF]/30 w-full rounded-3xl p-8 backdrop-blur-xl h-auto">
+                <CardBody className="bg-gradient-to-br from-white/10 to-white/5 relative group/card border border-[#2DD4BF]/20 hover:border-[#2DD4BF]/50 w-full rounded-2xl p-8 backdrop-blur-sm transition-all duration-500">
                   
                   <CardItem translateZ="50" className="flex items-center gap-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-[#2DD4BF]/10 text-[#2DD4BF]">
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-[#2DD4BF]/20 to-[#7C3AED]/10 text-[#2DD4BF] group-hover/card:from-[#2DD4BF]/30 group-hover/card:to-[#7C3AED]/20 transition-all duration-500">
                       <Icon size={28} />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-100 font-[family-name:var(--font-heading)]">
+                    <h3 className="text-2xl font-bold text-white">
                       {skillGroup.category}
                     </h3>
                   </CardItem>
@@ -45,19 +47,19 @@ export default function Skills() {
                     {skillGroup.items.map((skill, i) => (
                       <StaggerItem key={i}>
                         <CardItem translateZ="30" className="w-full">
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-slate-300 font-medium">{skill.name}</span>
-                            <span className="text-[#2DD4BF] font-mono text-sm">{skill.pct}%</span>
+                          <div className="flex justify-between items-center mb-3">
+                            <span className="text-[#CBD5E1] font-medium">{skill.name}</span>
+                            <span className="text-[#2DD4BF] font-mono text-sm font-bold">{skill.pct}%</span>
                           </div>
-                          <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                          <div className="h-2.5 w-full bg-white/5 rounded-full overflow-hidden border border-[#2DD4BF]/10">
                             <motion.div
                               initial={{ width: 0 }}
                               whileInView={{ width: `${skill.pct}%` }}
                               viewport={{ once: true }}
                               transition={{ duration: 1.5, delay: 0.2 + (i * 0.1), ease: "easeOut" }}
-                              className="h-full bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] rounded-full relative"
+                              className="h-full bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED] rounded-full relative shadow-[0_0_20px_rgba(45,212,191,0.5)]"
                             >
-                              <div className="absolute top-0 right-0 bottom-0 w-10 bg-gradient-to-r from-transparent to-white/30 blur-[2px]" />
+                              <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 blur-sm" />
                             </motion.div>
                           </div>
                         </CardItem>
