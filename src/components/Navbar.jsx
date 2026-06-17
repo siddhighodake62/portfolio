@@ -51,7 +51,7 @@ export default function Navbar() {
           }}
           className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-[#E2E8F0] hover:from-[#2DD4BF] hover:to-[#7C3AED] transition-all duration-500"
         >
-          Siddhi<span className="text-[#2DD4BF]">.</span>
+          Siddhii<span className="text-[#2DD4BF]">.</span>
         </a>
 
         {/* Desktop links - Premium spacing */}
