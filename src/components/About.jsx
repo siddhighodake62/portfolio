@@ -27,7 +27,7 @@ function AnimatedCounter({ from = 0, to, duration = 2 }) {
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 relative z-10">
+    <section id="about" className="py-32 px-6 relative z-10 bg-[#0F172A]">
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="mb-20">
@@ -35,7 +35,7 @@ export default function About() {
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED]">Me</span>
             </h2>
             <p className="text-lg text-[#94A3B8] max-w-2xl font-light leading-relaxed">
-              A passionate professional bridging data science and software development, with a keen eye for solving complex problems with elegant solutions.
+              A passionate professional bridging data analyst and web development, with a keen eye for solving complex problems with elegant solutions.
             </p>
           </div>
         </FadeIn>
@@ -47,7 +47,7 @@ export default function About() {
               <div className="p-8 rounded-2xl bg-white/5 border border-[#2DD4BF]/20 backdrop-blur-sm hover:border-[#2DD4BF]/40 hover:bg-white/[0.08] transition-all duration-500">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional Journey</h3>
                 <p className="text-[#CBD5E1] text-lg leading-relaxed mb-4">
-                  I am a <span className="text-[#2DD4BF] font-semibold">Data Analyst and Full-Stack Developer</span> with a passion for transforming raw data into strategic insights and building intuitive digital solutions. Currently honing my skills as an IT Trainee at TechTech Ltd, where I design SQL queries, architect Power BI dashboards, and automate workflows.
+                  I am a <span className="text-[#2DD4BF] font-semibold">Data Analyst and Web Developer</span> with a passion for transforming raw data into strategic insights and building intuitive digital solutions. Currently honing my skills as an IT Trainee at TechTech Ltd, where I design SQL queries, architect Power BI dashboards, and automate workflows.
                 </p>
                 <p className="text-[#CBD5E1] text-lg leading-relaxed">
                   My unique strength lies in combining analytical rigor with software engineering best practices—enabling me to create not just reports, but transformative data products. I thrive on learning cutting-edge technologies and collaborating with cross-functional teams to solve real-world challenges.

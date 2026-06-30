@@ -3,16 +3,17 @@
 // ============================================================
 
 export const navLinks = [
-  { label: "About",        href: "#about" },
-  { label: "Skills",       href: "#skills" },
-  { label: "Experience",   href: "#experience" },
-  { label: "Projects",     href: "#projects" },
-  { label: "Analytics",    href: "#analytics" },
-  { label: "Education",    href: "#education" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Analytics", href: "#analytics" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "Certifications", href: "#certifications" },
-  { label: "Video",        href: "#video" },
-  { label: "Contact",      href: "#contact" },
+  { label: "Education", href: "#education" },
+  { label: "Volunteering", href: "#volunteering" },
+  { label: "Contact", href: "#contact" },
 ];
+
 
 export const aboutStats = [
   { label: "Projects Completed", value: 10 },
@@ -32,7 +33,7 @@ export const skills = [
       { name: "Tailwind CSS", pct: 85 },
     ],
   },
-   {
+  {
     category: "Data Analytics & Reporting",
     icon: "chart",
     items: [
@@ -58,7 +59,7 @@ export const skills = [
       { name: "MongoDB", pct: 50 },
     ],
   },
- 
+
 ];
 
 export const experience = [
@@ -79,7 +80,7 @@ export const experience = [
   },
 ];
 
-export const projectCategories = ["All", "Web Development", "Data Analytics", "Dashboard Projects"];
+export const projectCategories = ["All", "Web Development"];
 
 export const projects = [
   {
@@ -97,29 +98,30 @@ export const projects = [
     demo: "#"
   },
   {
-    title: "Pizza Sales Data Analysis",
-    description: "End-to-end sales analysis pipeline on 12 months of pizza order data — from raw CSV ingestion to visual insights delivered via Excel dashboards.",
-    category: "Data Analytics",
-    tech: ["SQL", "Python", "Excel"],
+    title: "Online Hostel Management System",
+    description: "A web-based application replacing manual paperwork and registers with digital student records, room allocation, and automated tracking.",
+    category: "Web Development",
+    tech: ["PHP", "MySQL", "HTML", "CSS"],
     highlights: [
-      "Ingested and cleaned 48,000+ rows of order data using Python (pandas).",
-      "Wrote complex SQL queries to compute revenue, order trends, and top sellers.",
-      "Identified peak hours and best-selling categories, enabling targeted promotions.",
+      "Eliminated manual paperwork and registers, saving administrative time.",
+      "Built centralized MySQL database for easy room allocation and updates.",
+      "Developed search and retrieval features for student and hostel records.",
     ],
-    image: "/placeholder-pizza.jpg",
+    image: "/placeholder-hostel.jpg",
     github: "https://github.com/siddhighodake62",
     demo: "#"
   },
   {
-    title: "Regional Sales Tracker",
-    description: "Interactive Power BI dashboard tracking regional sales, identifying top-performing products, and highlighting seasonal trends.",
-    category: "Dashboard Projects",
-    tech: ["Power BI", "SQL Data Modeling"],
+    title: "Personal Portfolio Website",
+    description: "A high-performance, interactive dark-themed portfolio featuring glassmorphic designs, custom canvas backgrounds, and smooth transitions.",
+    category: "Web Development",
+    tech: ["React.js", "Vite", "Framer Motion", "Tailwind CSS"],
     highlights: [
-      "Connected to live SQL database for real-time reporting.",
-      "Implemented dynamic DAX measures for YTD and MoM growth.",
+      "Designed modern dark glassmorphism layout with purple and teal accent glow effects.",
+      "Integrated interactive browser mockup frames and category-specific project filters.",
+      "Implemented responsive layouts and fluid page transitions using Framer Motion.",
     ],
-    image: "/placeholder-sales.jpg",
+    image: "/placeholder-portfolio.jpg",
     github: "https://github.com/siddhighodake62",
     demo: "#"
   }
@@ -127,39 +129,90 @@ export const projects = [
 
 export const powerBiDashboards = [
   {
-    title: "Executive Business Summary",
-    description: "High-level overview of revenue, profit margins, and regional performance.",
-    image: "/powerbi-1.jpg",
-    kpis: ["$2.4M Revenue", "18% Margin", "12k Orders"]
+    title: "Social Media Ad Campaign Tracker",
+    description: "Designed an interactive Power BI dashboard analyzing a multi-platform ad campaign of 500 users. Delivers granular insights on conversions, platform engagement, time spent, and categories.",
+    image: "/placeholder-social-ad.jpg",
+    kpis: [
+      { value: "500", label: "Total Users" },
+      { value: "Power BI", label: "Analytics Tool" },
+      { value: "DAX", label: "Measures & filters" }
+    ]
   },
   {
-    title: "Inventory & Supply Chain",
-    description: "Real-time tracking of stock levels, supplier lead times, and warehouse efficiency.",
-    image: "/powerbi-2.jpg",
-    kpis: ["98% In-Stock", "2.4 Days Lead", "1.2% Loss"]
+    title: "Earthquake & Tsunami Analysis",
+    description: "Analyzed global earthquake data (2001–2022) in Python to examine seismic trends, magnitudes (6.8–7.1 averages), tectonic depths, and coastal tsunami occurrences.",
+    image: "/placeholder-earthquake.jpg",
+    kpis: [
+      { value: "6.8 - 7.1", label: "Avg Magnitude" },
+      { value: "<300 km", label: "Shallow Depth" },
+      { value: "21 Years", label: "Historical Data" }
+    ]
+  },
+  {
+    title: "Pizza Sales SQL Analytics",
+    description: "Analyzed pizza sales data using MySQL across 4 key tables (Orders, Order_Details, Pizzas, Pizza_Types). Queries span Basic, Intermediate & Advanced levels — covering revenue trends, category performance, hourly patterns, and cumulative growth using Window Functions.",
+    image: "/placeholder-pizza.jpg",
+    kpis: [
+      { value: "4 Tables", label: "DB Schema" },
+      { value: "3 Tiers", label: "Query Complexity" },
+      { value: "RANK()", label: "Window Functions" }
+    ]
   }
 ];
 
 export const education = [
   {
     degree: "Bachelor of Computer Science",
-    institution: "MIT Arts, Commerce and Science College, Alandi",
-    year: "2025",
-    cgpa: "8.7",
+    institution: "MIT Arts, Commerce and Science College",
+    year: "2022 – 2025",
+    cgpa: "8.7/10",
+  },
+  {
+    degree: "Higher Secondary Certificate (HSC)",
+    institution: "P.K. Arts, Commerce and Science College, Chakan",
+    year: "2020 – 2022",
+    percentage: "70%",
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    institution: "H.M.V School, Chinchoshi",
+    year: "2019 – 2020",
+    percentage: "85%",
   },
 ];
 
+export const volunteering = [
+  {
+    role: "Event Coordinator – SciFari & Kshitij",
+    institution: "MIT Arts, Commerce and Science College",
+    highlights: [
+      "Coordinated event planning and execution activities",
+      "Managed participant registrations and event logistics",
+      "Collaborated with faculty and student teams for smooth operations",
+      "Helped in organizing college-level technical and cultural events",
+      "Developed leadership, teamwork, and communication skills",
+    ],
+  },
+];
+
+
 export const certifications = [
+  {
+    title: "Data Analytics Job Simulation",
+    issuer: "Deloitte (Forage)",
+    image: "/certificates/Data Analyst Deloitte.pdf",
+    year: "2026",
+  },
   {
     title: "Data Analytics Professional Certificate",
     issuer: "Fortune Cloud Technologies, Pune",
-    image: "/certificates/DA_Certificate_Siddhi_Raghunath_Ghodake_1.pdf",
+    image: "/certificates/DA_Certificate_Siddhi_Ghodake.pdf",
     year: "2025",
   },
   {
     title: "Data Analyst - Internship Experience",
-    issuer: "TechTech Ltd",
-    image: "/certificates/Internship Exp Letter-DA_Siddhi_Raghunath_Ghodake.pdf",
+    issuer: "Cravita Technologies India Pvt.Ltd.",
+    image: "/certificates/Internship_Experience_Siddhi_Ghodake.pdf",
     year: "2025",
   },
 ];

@@ -12,7 +12,7 @@ function CertificateModal({ cert, onClose }) {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-auto"
@@ -34,24 +34,29 @@ function CertificateModal({ cert, onClose }) {
           </button>
           
           {isPDF ? (
-            <div className="flex flex-col items-center justify-center p-6 sm:p-10 bg-slate-800">
-              <FiAward size={56} className="text-[#2DD4BF] mb-4" />
-              <p className="text-slate-300 text-base sm:text-lg font-semibold mb-6 text-center">PDF Certificate</p>
-              <div className="flex gap-3 sm:gap-4 flex-wrap justify-center w-full">
+            <div className="bg-slate-800 flex flex-col items-center justify-center overflow-hidden h-[55vh] sm:h-[70vh] relative rounded-t-2xl sm:rounded-t-3xl">
+              <iframe
+                src={`${cert.image}#toolbar=0`}
+                title={cert.title}
+                className="w-full h-full border-none"
+              />
+              <div className="absolute bottom-4 right-4 flex gap-2">
                 <a
                   href={cert.image}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#2DD4BF]/20 border border-[#2DD4BF]/50 text-[#2DD4BF] rounded-lg sm:rounded-xl hover:bg-[#2DD4BF]/30 hover:border-[#2DD4BF] transition-all duration-300 font-semibold text-sm sm:text-base whitespace-nowrap"
+                  className="p-2.5 bg-slate-950/90 hover:bg-slate-900 text-white rounded-lg border border-slate-700 hover:border-[#2DD4BF] transition-all"
+                  title="Open in New Tab"
                 >
-                  <FiExternalLink size={18} /> View
+                  <FiExternalLink size={16} />
                 </a>
                 <a
                   href={cert.image}
                   download
-                  className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#7C3AED]/20 border border-[#7C3AED]/50 text-[#7C3AED] rounded-lg sm:rounded-xl hover:bg-[#7C3AED]/30 hover:border-[#7C3AED] transition-all duration-300 font-semibold text-sm sm:text-base whitespace-nowrap"
+                  className="p-2.5 bg-slate-950/90 hover:bg-slate-900 text-white rounded-lg border border-slate-700 hover:border-[#2DD4BF] transition-all"
+                  title="Download"
                 >
-                  <FiDownload size={18} /> Download
+                  <FiDownload size={16} />
                 </a>
               </div>
             </div>
@@ -91,7 +96,7 @@ export default function Certifications() {
 
   return (
     <>
-      <section id="certifications" className="py-32 px-6 relative z-10">
+      <section id="certifications" className="py-32 px-6 relative z-10 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="mb-20">
@@ -99,7 +104,7 @@ export default function Certifications() {
                 Licenses & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#7C3AED]">Certifications</span>
               </h2>
               <p className="text-lg text-[#94A3B8] max-w-2xl font-light">
-                Professional certifications and credentials that validate my expertise in data analytics and software development.
+                Professional certifications and credentials that validate my expertise in data analytics
               </p>
             </div>
           </FadeIn>

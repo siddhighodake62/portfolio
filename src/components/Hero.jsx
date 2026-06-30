@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 bg-transparent"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 bg-[#0F172A]"
     >
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left: Text Content - Premium minimal */}
@@ -28,7 +28,7 @@ export default function Hero() {
               <p className="text-[#2DD4BF] text-sm font-medium tracking-wide">Available for opportunities</p>
             </div>
           </StaggerItem>
-          
+
           <StaggerItem>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-tight mb-6 text-white">
               Siddhi <br />
@@ -73,7 +73,11 @@ export default function Hero() {
               {[
                 { Icon: FiLinkedin, href: contact.linkedin, label: "LinkedIn" },
                 { Icon: FiGithub, href: contact.github, label: "GitHub" },
-                { Icon: FiMail, href: `mailto:${contact.email}`, label: "Email" }
+                {
+                  Icon: FiMail,
+                  href: `mailto:${contact.email}?subject=Portfolio%20Inquiry`,
+                  label: "Email"
+                }
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -92,7 +96,7 @@ export default function Hero() {
         </StaggerContainer>
 
         {/* Right: Profile Image - Premium minimal with subtle animations */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
@@ -101,14 +105,14 @@ export default function Hero() {
           <div className="relative w-72 h-72 sm:w-96 sm:h-96">
             {/* Gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/20 via-[#7C3AED]/10 to-[#2DD4BF]/5 rounded-3xl blur-2xl" />
-            
+
             {/* Subtle rotating border - minimal */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute inset-0 rounded-3xl border border-transparent bg-gradient-to-r from-[#2DD4BF]/40 via-transparent to-[#7C3AED]/40 bg-clip-border"
             />
-            
+
             {/* Image container */}
             <div className="absolute inset-2 rounded-3xl overflow-hidden border border-[#2DD4BF]/20 bg-[#1A202C] shadow-2xl shadow-[#2DD4BF]/10">
               <img
@@ -127,7 +131,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator - subtle and refined */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1, repeat: Infinity, repeatType: "reverse" }}

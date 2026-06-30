@@ -3,13 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
 import DataAnalyticsShowcase from "./components/DataAnalyticsShowcase";
-import Education from "./components/Education";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 import Certifications from "./components/Certifications";
-import VideoSection from "./components/VideoSection";
-import SoftSkills from "./components/SoftSkills";
+import Education from "./components/Education";
+import Volunteering from "./components/Volunteering";
 import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
 import ScrollProgress from "./components/ScrollProgress";
@@ -29,13 +28,12 @@ function App() {
           <Hero />
           <About />
           <Skills />
-          <Experience />
-          <Projects />
           <DataAnalyticsShowcase />
-          <Education />
+          <Projects />
+          <Experience />
           <Certifications />
-          <VideoSection />
-          <SoftSkills />
+          <Education />
+          <Volunteering />
           <Contact />
         </MouseSpotlight>
       </div>

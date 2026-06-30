@@ -5,13 +5,13 @@ import { FiBookOpen, FiAward } from "react-icons/fi";
 
 export default function Education() {
   return (
-    <SectionWrapper id="education">
+    <SectionWrapper id="education" className="bg-[#1E293B]">
       <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] text-center mb-4">
         <span className="text-[#2DD4BF]">Education</span>
       </h2>
       <div className="w-16 h-1 bg-[#2DD4BF] rounded-full mx-auto mb-12" />
 
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto flex flex-col gap-6">
         {education.map((edu, i) => (
           <div
             key={i}
@@ -22,17 +22,25 @@ export default function Education() {
                 <FiBookOpen size={24} className="text-[#2DD4BF]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-[family-name:var(--font-heading)] mb-1">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-heading)] mb-1 text-white">
                   {edu.degree}
                 </h3>
                 <p className="text-[#94A3B8] mb-3">{edu.institution}</p>
                 <div className="flex flex-wrap gap-3">
-                  <span className="flex items-center gap-1.5 px-3 py-1 text-sm bg-[#2DD4BF]/10 text-[#2DD4BF] rounded-full border border-[#2DD4BF]/20">
-                    <FiAward size={14} />
-                    CGPA: {edu.cgpa}
-                  </span>
+                  {edu.cgpa && (
+                    <span className="flex items-center gap-1.5 px-3 py-1 text-sm bg-[#2DD4BF]/10 text-[#2DD4BF] rounded-full border border-[#2DD4BF]/20">
+                      <FiAward size={14} />
+                      CGPA: {edu.cgpa}
+                    </span>
+                  )}
+                  {edu.percentage && (
+                    <span className="flex items-center gap-1.5 px-3 py-1 text-sm bg-[#2DD4BF]/10 text-[#2DD4BF] rounded-full border border-[#2DD4BF]/20">
+                      <FiAward size={14} />
+                      Percentage: {edu.percentage}
+                    </span>
+                  )}
                   <span className="px-3 py-1 text-sm bg-[#334155]/50 text-[#94A3B8] rounded-full border border-[#334155]">
-                    Class of {edu.year}
+                    {edu.year}
                   </span>
                 </div>
               </div>
