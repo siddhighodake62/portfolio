@@ -17,7 +17,7 @@ import GlobalBackground from "./components/GlobalBackground";
 
 function App() {
   return (
-    <div className="bg-gradient-to-b from-[#0F172A] via-[#1A202C] to-[#0D1117] min-h-screen text-[#E2E8F0] overflow-x-hidden selection:bg-[#2DD4BF]/30 selection:text-white relative">
+    <div className="bg-[#0B1120] min-h-screen text-[#E2E8F0] overflow-x-hidden selection:bg-[#2DD4BF]/30 selection:text-white relative">
       <GlobalBackground />
       <CustomCursor />
       <ScrollProgress />

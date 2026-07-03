@@ -19,7 +19,7 @@ function SkillPill({ skill, index, isInView, reduced }) {
   return (
     <span
       onClick={handleClick}
-      className={`relative overflow-hidden px-6 py-3 rounded-full text-base font-medium bg-[#1E293B]/80 border border-[#334155]/50 text-[#F1F5F9] hover:border-[#2DD4BF] hover:text-[#2DD4BF] hover:shadow-[0_0_15px_#2DD4BF33] transition-all duration-300 cursor-default select-none ${
+      className={`relative overflow-hidden px-6 py-3 rounded-full text-base font-medium bg-white/5 border border-white/10 text-[#F1F5F9] hover:border-[#2DD4BF] hover:text-[#2DD4BF] hover:shadow-[0_0_15px_#2DD4BF33] transition-all duration-300 cursor-default select-none ${
         !reduced ? "hover:animate-[wobble_0.5s_ease-in-out]" : ""
       } ${
         reduced

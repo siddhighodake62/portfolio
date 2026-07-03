@@ -44,7 +44,7 @@ function ProjectPreview({ project, categoryColor }) {
   return (
     <div className="relative w-full h-48 bg-[#070a12] rounded-t-xl overflow-hidden border-b border-slate-800/60 flex flex-col">
       {/* Browser Header */}
-      <div className="flex items-center px-4 py-2.5 bg-slate-900/60 border-b border-slate-800/40 gap-2 shrink-0">
+      <div className="flex items-center px-4 py-2.5 bg-white/5 border-b border-white/10 gap-2 shrink-0">
         <div className="flex gap-1.5">
           <span className="w-2 h-2 rounded-full bg-[#EF4444]/80" />
           <span className="w-2 h-2 rounded-full bg-[#F59E0B]/80" />
@@ -145,7 +145,7 @@ function ProjectCard({ project }) {
       />
       
       {/* Inner Card */}
-      <div className="relative rounded-[15px] bg-[#0a0e1a]/95 backdrop-blur-xl overflow-hidden flex-grow flex flex-col">
+      <div className="relative rounded-[15px] bg-white/[0.03] backdrop-blur-xl overflow-hidden flex-grow flex flex-col">
         {/* Subtle Category Top Accent Bar */}
         <div className="h-[3.5px] w-full" style={{ backgroundColor: categoryColor }} />
         
@@ -229,7 +229,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-32 px-6 relative z-10 bg-[#0a0e1a]">
+    <section id="projects" className="py-32 px-6 relative z-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="mb-16">

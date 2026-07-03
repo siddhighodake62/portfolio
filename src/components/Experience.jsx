@@ -82,7 +82,7 @@ export default function Experience() {
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section id="experience" className="py-28 px-6 relative z-10 bg-[#1E293B]" ref={containerRef}>
+    <section id="experience" className="py-28 px-6 relative z-10 border-t border-white/5" ref={containerRef}>
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="mb-16">

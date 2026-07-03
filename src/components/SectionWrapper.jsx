@@ -10,7 +10,7 @@ export default function SectionWrapper({ id, children, className = "" }) {
     <section
       id={id}
       ref={ref}
-      className={`py-20 md:py-28 px-6 ${className}`}
+      className={`py-20 md:py-28 px-6 border-t border-white/5`}
       style={
         reduced
           ? {}

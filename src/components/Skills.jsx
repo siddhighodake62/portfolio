@@ -13,7 +13,7 @@ const iconMap = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 px-6 relative z-10 bg-[#1E293B]">
+    <section id="skills" className="py-32 px-6 relative z-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="mb-20">

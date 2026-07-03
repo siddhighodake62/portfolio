@@ -65,7 +65,7 @@ function AnalyticsPreview({ title, image }) {
   return (
     <div className="relative w-full h-40 bg-[#070a12] rounded-t-xl overflow-hidden border-b border-slate-800/50 flex flex-col shrink-0">
       {/* Browser Header */}
-      <div className="flex items-center px-4 py-2 bg-slate-900/60 border-b border-slate-800/40 gap-1.5 shrink-0">
+      <div className="flex items-center px-4 py-2 bg-white/5 border-b border-white/10 gap-1.5 shrink-0">
         <div className="flex gap-1">
           <span className="w-2 h-2 rounded-full bg-[#EF4444]/60" />
           <span className="w-2 h-2 rounded-full bg-[#F59E0B]/60" />
@@ -113,7 +113,7 @@ function AnalyticsPreview({ title, image }) {
 
 export default function DataAnalyticsShowcase() {
   return (
-    <section id="analytics" className="py-20 sm:py-24 md:py-28 px-4 sm:px-6 relative z-10 bg-[#0a0e1a]">
+    <section id="analytics" className="py-20 sm:py-24 md:py-28 px-4 sm:px-6 relative z-10 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <div className="mb-12 flex flex-col items-center text-center">
@@ -133,7 +133,7 @@ export default function DataAnalyticsShowcase() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {powerBiDashboards.map((dashboard, index) => (
             <StaggerItem key={index}>
-              <div className="bg-[#0a0e1a]/95 border border-white/5 rounded-2xl overflow-hidden group hover:border-[#f5c518]/40 transition-all duration-500 shadow-xl flex flex-col h-full hover:shadow-[0_20px_40px_rgba(10,14,26,0.8)]">
+              <div className="bg-white/[0.04] border border-white/8 rounded-2xl overflow-hidden group hover:border-[#f5c518]/40 transition-all duration-500 shadow-xl flex flex-col h-full hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
                 
                 {/* Custom Preview */}
                 <AnalyticsPreview title={dashboard.title} image={dashboard.image} />

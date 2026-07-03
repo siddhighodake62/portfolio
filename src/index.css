@@ -54,7 +54,7 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-navy);
+  background-color: #0B1120;
   color: var(--color-soft-white);
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #030014; }
+::-webkit-scrollbar-track { background: #0B1120; }
 ::-webkit-scrollbar-thumb { background: #6366F155; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #6366F1; }
 

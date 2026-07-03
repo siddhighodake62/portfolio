@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 bg-[#0F172A]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20"
     >
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left: Text Content - Premium minimal */}
@@ -114,7 +114,7 @@ export default function Hero() {
             />
 
             {/* Image container */}
-            <div className="absolute inset-2 rounded-3xl overflow-hidden border border-[#2DD4BF]/20 bg-[#1A202C] shadow-2xl shadow-[#2DD4BF]/10">
+            <div className="absolute inset-2 rounded-3xl overflow-hidden border border-[#2DD4BF]/20 bg-[#0B1120] shadow-2xl shadow-[#2DD4BF]/10">
               <img
                 src="/profile.jpg"
                 alt="Siddhi Ghodake"

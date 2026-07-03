@@ -33,7 +33,7 @@ export default function Preloader({ onComplete }) {
 
   return (
     <div
-      className={`fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#0F172A] transition-all duration-600 ${
+      className={`fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#0B1120] transition-all duration-600 ${
         fadeOut ? "opacity-0 scale-110" : "opacity-100 scale-100"
       }`}
     >
@@ -85,7 +85,7 @@ export default function Preloader({ onComplete }) {
       </svg>
 
       {/* Progress bar */}
-      <div className="w-48 h-[2px] bg-[#1E293B] rounded-full overflow-hidden mb-3">
+      <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden mb-3">
         <div
           className="h-full bg-[#2DD4BF] transition-[width] duration-75"
           style={{ width: `${progress}%` }}

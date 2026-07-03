@@ -37,7 +37,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0F172A]/70 backdrop-blur-xl shadow-lg shadow-[#2DD4BF]/5 border-b border-[#2DD4BF]/10"
+          ? "bg-[#0B1120]/80 backdrop-blur-xl shadow-lg shadow-[#2DD4BF]/5 border-b border-[#2DD4BF]/10"
           : "bg-transparent"
       }`}
     >
@@ -91,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile menu - Premium styling */}
       {open && (
-        <div className="md:hidden bg-gradient-to-b from-[#0F172A]/95 to-[#1A202C]/95 backdrop-blur-xl border-t border-[#2DD4BF]/10 animate-[fade-up_0.3s_ease-out]">
+        <div className="md:hidden bg-[#0B1120]/95 backdrop-blur-xl border-t border-[#2DD4BF]/10 animate-[fade-up_0.3s_ease-out]">
           <ul className="flex flex-col p-6 gap-2">
             {navLinks.map((link) => {
               const key = link.href.replace("#", "");

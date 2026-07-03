@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function GlobalBackground() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none top-0 left-0 w-full h-full overflow-hidden">
-      {/* Deep Navy Base */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A] via-[#1A202C] to-[#0D1117]" />
+      {/* Single consistent deep navy base */}
+      <div className="absolute inset-0 bg-[#0B1120]" />
       
       {/* Subtle Gradient Mesh */}
       <svg 

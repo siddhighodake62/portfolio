@@ -27,7 +27,7 @@ function AnimatedCounter({ from = 0, to, duration = 2 }) {
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 relative z-10 bg-[#0F172A]">
+    <section id="about" className="py-32 px-6 relative z-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="mb-20">

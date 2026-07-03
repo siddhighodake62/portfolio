@@ -5,7 +5,7 @@ import { FiBookOpen, FiAward } from "react-icons/fi";
 
 export default function Education() {
   return (
-    <SectionWrapper id="education" className="bg-[#1E293B]">
+    <SectionWrapper id="education">
       <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] text-center mb-4">
         <span className="text-[#2DD4BF]">Education</span>
       </h2>
@@ -15,7 +15,7 @@ export default function Education() {
         {education.map((edu, i) => (
           <div
             key={i}
-            className="bg-[#1E293B]/60 border border-[#334155]/50 rounded-2xl p-8 hover:border-[#2DD4BF]/30 transition-all duration-300 group"
+            className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#2DD4BF]/30 hover:bg-white/[0.08] transition-all duration-300 group"
           >
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 rounded-2xl bg-[#2DD4BF]/10 flex items-center justify-center shrink-0 group-hover:bg-[#2DD4BF]/20 transition-all duration-300">
